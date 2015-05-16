@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 '''The app module, containing the app factory function.'''
+
 import logging
 import os
 import sys
 import datetime
+
 from flask import Flask, render_template
 
 from purchasing.settings import ProdConfig
@@ -44,6 +46,7 @@ def create_app(config_object=ProdConfig):
 
     @app.before_first_request
     def before_first_request():
+<<<<<<< HEAD
         if app.debug and not app.testing:
             # log to console for dev
             app.logger.setLevel(logging.DEBUG)
@@ -72,6 +75,10 @@ def create_app(config_object=ProdConfig):
             # app.logger.setLevel(logging.DEBUG)
 
         app.logger.info("app config before_first_request: %s", app.config)
+=======
+        if app.debug:
+            app.logger.setLevel(logging.DEBUG)
+>>>>>>> added dockerenv shell script, basic logging
 
     return app
 

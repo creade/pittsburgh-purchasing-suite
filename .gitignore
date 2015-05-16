@@ -56,3 +56,7 @@ opportunities.js
 
 # App logs (from foreman)
 log
+
+# Docker environments
+.dockerenv
+

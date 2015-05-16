@@ -57,6 +57,7 @@ class DevConfig(Config):
     ASSETS_DEBUG = True
 
 class TestConfig(Config):
+    ENV = 'test'
     TESTING = True
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = 'postgresql://localhost/purchasing_test'
